@@ -1,0 +1,39 @@
+{
+  "name": "brandonjbegle/nova-4-slack-channel-field",
+  "description": "This Nova Package is a searchable select for storing your slack channel information in a database field.",
+  "keywords": [
+    "laravel",
+    "nova",
+    "field",
+    "slack"
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://nova.laravel.com"
+    }
+  ],
+  "license": "MIT",
+  "require": {
+    "php": "^8.0",
+    "laravel/nova": "^4.0",
+    "jolicode/slack-php-api": "^4.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "BrandonJBegle\\SlackChannel\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "BrandonJBegle\\SlackChannel\\FieldServiceProvider"
+      ]
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
