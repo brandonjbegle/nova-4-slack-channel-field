@@ -2,6 +2,9 @@
 
 This Nova Package is a searchable select for storing your slack channel information in a database field.
 
+<img src="https://bw-public-images.s3-us-east-2.amazonaws.com/example.png" width="80%">
+
+
 ## Installation
 
 You can install the package in to a Laravel app that uses Nova via composer:
