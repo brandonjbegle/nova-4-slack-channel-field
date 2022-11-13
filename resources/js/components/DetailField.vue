@@ -1,12 +1,12 @@
 <template>
   <PanelItem :index="index" :field="field">
     <template #value>
-      <div class="flex items-center justify-start"  v-if="value">
-        <div class="mr-2">
+      <div class="flex items-center justify-start">
+        <div class="mr-2" v-if="value && value.type">
           <Hash v-if="value.type === 'public'" height="15px" width="15px"></Hash>
-          <Lock v-else height="15px" width="15px"></Lock>
+          <Lock v-else-if="value.type === 'private'" height="15px" width="15px"></Lock>
         </div>
-        <span class="font-medium">{{ value.display }}</span>
+        <span class="font-medium">{{ value && value.display ? value.display : ''}}</span>
       </div>
     </template>
   </PanelItem>
@@ -24,7 +24,7 @@ export default {
   },
   computed:{
     value(){
-      return this.field.value || {display: ''}
+      return this.field.value
     }
   }
 }
