@@ -24,7 +24,7 @@ export default {
   },
   computed:{
     value(){
-      return this.field.value
+      return this.field.value || ''
     }
   }
 }
