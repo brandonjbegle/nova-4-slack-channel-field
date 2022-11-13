@@ -7,7 +7,7 @@ This Nova Package is a searchable select for storing your slack channel informat
 You can install the package in to a Laravel app that uses Nova via composer:
 
 ```bash
-composer require brandonjbegle/nova4-slack-channel-field
+composer require brandonjbegle/nova-4-slack-channel-field
 ```
 
 Now publish config file:
