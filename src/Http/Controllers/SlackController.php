@@ -20,7 +20,6 @@ class SlackController extends Controller
     {
         $term = $request->get('term');
         $types = $request->get('types');
-//        ,private_channel Readme needs info aobut thsi
 
         $channels = Cache::remember('slackChannels-' . $types, 120, function () use ($types) {
             return collect($this->client->conversationsList(['types' => $types ?: 'public_channel'])->getChannels());
